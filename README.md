@@ -1,16 +1,4 @@
-
-# Raweeb API
-Rest API Manhwa Bahasa Indonesia
-
-## Source
-![komikstation]("https://komikstation.org")
-![bacakomik]("https://bacakomik.my/")
-
-## LN source
-![Light Novel]("https://bacalightnovel.co/")
-
-## Demo
-![Live Demo]("https://raweeb.space")
+Rest api manhwa 
 
 ## Fitur
 
