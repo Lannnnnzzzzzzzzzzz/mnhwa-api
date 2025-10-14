@@ -1,9 +1,8 @@
-![Preview](raweeb.png)
+
 # Raweeb API
 Rest API Manhwa Bahasa Indonesia
 
 ## Source
-![Kiryuu02]("https://kiryuu02.com/")
 ![komikstation]("https://komikstation.org")
 ![bacakomik]("https://bacakomik.my/")
 
@@ -39,10 +38,10 @@ Rest API Manhwa Bahasa Indonesia
 ## Installasi
 ```bash
 # Clone repositori
-git clone https://github.com/ranimev3/raweebapi/
+git clone https://github.com/Lannnnnzzzzzzzzzzz/mnhwa-api/
 
 # Masuk ke folder proyek
-cd raweebapi
+cd mnhwa-api
 
 # Install dependensi
 npm install
