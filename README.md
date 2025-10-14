@@ -81,119 +81,112 @@ npm start
 ## Routes
 URL Utama API:
 
-https://raweebapi.vercel.app/api/
+https://mnhwa-api.vercel.app/
 
 Ganti `$endpoint` dengan list endpoint ini.
 
 ## Endpoint List
 
-### 1. New Manhwa
-- **GET** `/manhwa-new`
-  
-  Get list manhwa terbaru.
-  
-  **Example:**  
-  `https://raweebapi.vercel.app/api/manhwa-new`
+1. New Manhwa
 
-### 2. Manhwa Populer
-- **GET** `/manhwa-popular`
+GET /manhwa-new
+Get list manhwa terbaru.
 
-  Get list manhwa populer
+Example:
+➡️ https://mnhwa-api.vercel.app/api/manhwa-new
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/manhwa-popular`
-  
-### 3. Manhwa Top
-- **GET** `/manhwa-top`
+2. Manhwa Populer
 
-  Get list manhwa top
+GET /manhwa-popular
+Get list manhwa populer.
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/manhwa-top`
-  
-### 4. Manhwa Ongoing
-- **GET** `/manhwa-ongoing`
+Example:
+➡️ https://mnhwa-api.vercel.app/api/manhwa-popular
 
-  Get list manhwa ongoing
+3. Manhwa Top
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/manhwa-ongoing`
-  
-### 5. Manhwa Rekomendasi
-- **GET** `/manhwa-recommendation`
+GET /manhwa-top
+Get list manhwa top.
 
-  Get list manhwa rekomendasi
+Example:
+➡️ https://mnhwa-api.vercel.app/api/manhwa-top
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/manhwa-recommendation`
+4. Manhwa Ongoing
 
-  
-### 6. Manhwa Details
-- **GET** `/manhwa-detail/:manhwaId`
+GET /manhwa-ongoing
+Get list manhwa ongoing.
 
-  Get detail manhwa sesuai  `manhwaId`.
+Example:
+➡️ https://mnhwa-api.vercel.app/api/manhwa-ongoing
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/manhwa-detail/nano-machine`
-  
+5. Manhwa Rekomendasi
 
-### 7. Chapter Details
-- **GET** `/chapter/:chapterId`
+GET /manhwa-recommendation
+Get list manhwa rekomendasi.
 
-  Get detail chapter manhwa sesuai  `chapterId`
+Example:
+➡️ https://mnhwa-api.vercel.app/api/manhwa-recommendation
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/chapter/nano-machine-chapter-1`
-  
+6. Manhwa Details
 
-### 8. Genre List
-- **GET** `/genres`
+GET /manhwa-detail/:manhwaId
+Get detail manhwa sesuai manhwaId.
 
-  Get list genre.
+Example:
+➡️ https://mnhwa-api.vercel.app/api/manhwa-detail/nano-machine
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/genres`
+7. Chapter Details
 
+GET /chapter/:chapterId
+Get detail chapter manhwa sesuai chapterId.
 
-### 9. Manhwa by Genre 
-- **GET** `/genre/:genreId`
+Example:
+➡️ https://mnhwa-api.vercel.app/api/chapter/nano-machine-chapter-1
 
-  Get list manhwa sesuai genre.
+8. Genre List
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/genre/action`
+GET /genres
+Get list genre.
 
+Example:
+➡️ https://mnhwa-api.vercel.app/api/genres
 
-  ### 10. Manhwa by Genre with Page
-- **GET** `/genre/:genreId/page/:pageNumber`
+9. Manhwa by Genre
 
-  Get list manhwa sesuai genre dan page.
+GET /genre/:genreId
+Get list manhwa sesuai genre.
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/genre/action/page/2`
+Example:
+➡️ https://mnhwa-api.vercel.app/api/genre/action
 
+10. Manhwa by Genre with Page
 
-### 11. Manhwa Search
-- **GET** `/search/:searchId`
+GET /genre/:genreId/page/:pageNumber
+Get list manhwa sesuai genre dan page.
 
-  Get list manhwa sesuai searchQuery.
+Example:
+➡️ https://mnhwa-api.vercel.app/api/genre/action/page/2
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/search/nano%20machine`
+11. Manhwa Search
 
-  
-### 12. Manhwa Search with Page
-- **GET** `/search/:searchId/page/:pageNumber`
+GET /search/:searchId
+Get list manhwa sesuai searchQuery.
 
-  Get list manhwa sesuai searchQuery dan page.
+Example:
+➡️ https://mnhwa-api.vercel.app/api/search/nano%20machine
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/search/nano%20machine/page/2`
-  
-### 13. A-Z List Manhwa
-- **GET** `/list`
+12. Manhwa Search with Page
 
-  Get A-Z list manhwa.
+GET /search/:searchId/page/:pageNumber
+Get list manhwa sesuai searchQuery dan page.
 
-  **Example:**  
-  `https://raweebapi.vercel.app/api/list`
+Example:
+➡️ https://mnhwa-api.vercel.app/api/search/nano%20machine/page/2
+
+13. A-Z List Manhwa
+
+GET /list
+Get A-Z list manhwa.
+
+Example:
+➡️ https://mnhwa-api.vercel.app/api/list
