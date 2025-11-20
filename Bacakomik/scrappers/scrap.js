@@ -3,7 +3,7 @@ import { fetchPage } from "../controllersv2/service.js"
 
 export const scrapeLatest = async (req, res) => {
     try {
-        const page = req.params.page || "1"
+        const page = req.query.page || "1"
         const url = `https://bacakomik.one/komik-terbaru/page/${page}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -35,8 +35,8 @@ export const scrapeLatest = async (req, res) => {
 
 export const scrapeSearch = async (req, res) => {
     try {
-        const page = req.params.page || "1"
-        const query = req.params.query
+        const page = req.params.pageNumber || req.query.page || "1"
+        const query = req.params.searchId
         const url = `https://bacakomik.one/page/${page}/?s=${query}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -67,7 +67,7 @@ export const scrapeSearch = async (req, res) => {
 
 export const scrapeDetail = async (req, res) => {
     try {
-        const komik = req.params.komik
+        const komik = req.params.manhwaId
         const url = `https://bacakomik.one/komik/${komik}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -102,7 +102,7 @@ export const scrapeDetail = async (req, res) => {
         
         const chapters = []
         $(".postbody #chapter_list li").each((index, element) => {
-            const chapterTitle = $(element).find("span.lchx chapter").text().replace(/\n/g, " ").trim()
+            const chapterTitle = $(element).find("span.lchx a").text().replace(/\n/g, " ").trim()
             const chapterLink = $(element).find("span.lchx a").attr("href")
             const chapterDate = $(element).find("span.dt").text().trim()
             chapters.push({title: chapterTitle,link: chapterLink,date: chapterDate })
@@ -117,7 +117,7 @@ export const scrapeDetail = async (req, res) => {
 
 export const scrapeChapter = async (req, res) => {
     try {
-        const link = req.params.link
+        const link = req.params.chapterId
         const url = `https://bacakomik.one/${link}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -158,8 +158,8 @@ export const scrapeGenres = async (req, res) => {
 
 export const scrapeGenre = async (req, res) => {
     try {
-        const page = req.params.page || "1"
-        const genre = req.params.genre
+        const page = req.params.pageNumber || req.query.page || "1"
+        const genre = req.params.genreId
         const url = `https://bacakomik.one/genres/${genre}/page/${page}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -190,7 +190,7 @@ export const scrapeGenre = async (req, res) => {
 
 export const scrapePopuler = async (req, res) => {
     try {
-        const page = req.params.page || "1"
+        const page = req.query.page || "1"
         const url = `https://bacakomik.one/komik-populer/page/${page}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -221,8 +221,8 @@ export const scrapePopuler = async (req, res) => {
 
 export const scrapeOnly = async (req, res) => {
     try {
-        const type = req.params.type
-        const page = req.params.page || "1"
+        const type = req.params.onlyId
+        const page = req.params.pageNumber || "1"
         const url = `https://bacakomik.one/baca-${type}/page/${page}`
         const html = await fetchPage(url)
         const $ = load(html)
@@ -365,8 +365,8 @@ export const scrapeNews = async (req, res) => {
     try {
         const response = await fetch("https://raw.githubusercontent.com/Fall-Xavier/Fall-Xavier/refs/heads/main/news.json");
         const jsonData = await response.json()
-        
-        textData = []
+
+        const textData = []
         jsonData.forEach(item => {
             textData.push({title: item.title, description: item.description })
         })

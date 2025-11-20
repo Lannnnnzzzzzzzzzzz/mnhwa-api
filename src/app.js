@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import apiRoutes from './routes/apiRoutes.js';
-// Diperbaiki: Nama variabel lebih deskriptif dan path file disarankan lebih rapi
+import bacakomikRoutes from '../Bacakomik/routesv2/router.js';
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 // API routes
 app.use('/api', apiRoutes);
-// Diperbaiki: Menggunakan variabel baru dengan path yang lebih spesifik
+app.use('/api/bacakomik', bacakomikRoutes);
 
 
 // Health check endpoint
