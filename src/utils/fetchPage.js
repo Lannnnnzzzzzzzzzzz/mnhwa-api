@@ -16,8 +16,8 @@ const headers = {
   "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8",
   "Accept-Encoding": "gzip, deflate, br",
   "Accept-Language": "en-US,en;q=0.9,id;q=0.8",
-  "Referer": "https://kiryuu02.com/",
-  "Origin": "https://kiryuu02.com",
+  "Referer": "https://kiryuu03.com/",
+  "Origin": "https://kiryuu03.com",
   "X-Requested-With": "XMLHttpRequest",  
   "Upgrade-Insecure-Requests": "1",  
 };

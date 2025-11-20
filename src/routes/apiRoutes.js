@@ -1,21 +1,28 @@
 import express from "express";
 import {
   getHome,
-  getManhwaPopular,
+  getManhwaPopular as getManhwaPopularOld,
   getManhwaRecommendation,
-  getManhwaNew,
+  getManhwaNew as getManhwaNewOld,
   getManhwaTop,
   getGenres,
   getGenreId,
   getGenreIdPage,
-  getSearch,
+  getSearch as getSearchOld,
   getSearchPage,
-  getManhwaDetail,
+  getManhwaDetail as getManhwaDetailOld,
   getManhwaOnGoing,
-  getChapter,
+  getChapter as getChapterOld,
   getList
 } from "../controllers/scrapingController.js";
 
+import {
+  getManhwaNew,
+  getManhwaPopular,
+  getManhwaDetail,
+  getChapter,
+  getSearch
+} from "../controllers/apiController.js";
 
 const router = express.Router();
 
